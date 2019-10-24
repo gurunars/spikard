@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "./lib",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -23,7 +23,7 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["src/*", ".types/*"],
+  "include": ["src", ".types/*"],
   "exclude": [
     "node_modules",
     "build",
