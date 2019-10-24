@@ -12,6 +12,9 @@
     "url": "ssh://git@github.com:gurunars/spikard.git",
     "type": "git"
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "main": "index.js",
   "devDependencies": {
     "typescript": "^3.6.4"
