@@ -1,0 +1,22 @@
+{
+  "name": "@gurunars/spikard",
+  "version": "0.2.0",
+  "description": "Some lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurunars/spikard.git"
+  },
+  "keywords": [
+    "Stuff"
+  ],
+  "author": "Anton Berezin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gurunars/spikard/issues"
+  },
+  "homepage": "https://github.com/gurunars/spikard#readme"
+}
