@@ -2,21 +2,15 @@
   "name": "@gurunars/spikard",
   "version": "0.2.0",
   "description": "Some lib",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Anton Berezin <gurunars@gmail.com>",
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gurunars/spikard.git"
+    "url": "ssh://git@github.com:gurunars/spikard.git",
+    "type": "git"
   },
-  "keywords": [
-    "Stuff"
-  ],
-  "author": "Anton Berezin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gurunars/spikard/issues"
-  },
-  "homepage": "https://github.com/gurunars/spikard#readme"
+  "main": "index.js"
 }
