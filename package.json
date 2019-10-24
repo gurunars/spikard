@@ -18,5 +18,8 @@
   "main": "index.js",
   "devDependencies": {
     "typescript": "^3.6.4"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
