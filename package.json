@@ -13,6 +13,7 @@
     "type": "git"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "build": "tsc",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json \"src/**/*.ts{,x}\"",
@@ -31,6 +32,6 @@
     "typescript": "^3.6.4"
   },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ]
 }
