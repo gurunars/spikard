@@ -25,6 +25,7 @@
   },
   "main": "index.js",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-centered": "^5.2.5",
     "@storybook/addon-info": "^5.2.5",
@@ -39,6 +40,7 @@
     "plop": "^2.5.2",
     "storybook-host": "^5.1.0",
     "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.1",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   },
