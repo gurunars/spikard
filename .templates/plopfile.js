@@ -17,6 +17,12 @@ module.exports = function(plop) {
         type: "add",
         path: "../src/{{name}}/story.tsx",
         templateFile: "StatelessComponent/story.hbs"
+      },
+
+      {
+        type: "add",
+        path: "../src/{{name}}/tests.tsx",
+        templateFile: "StatelessComponent/tests.hbs"
       }
     ]
   });
