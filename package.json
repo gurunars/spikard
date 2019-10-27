@@ -24,20 +24,8 @@
     "build-storybook": "build-storybook"
   },
   "jest": {
-    "transform": {
-      ".*\\.tsx?$": "ts-jest"
-    },
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testRegex": "tests\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
+    "preset": "ts-jest",
+    "testRegex": "tests\\.tsx?$"
   },
   "main": "index.js",
   "devDependencies": {
