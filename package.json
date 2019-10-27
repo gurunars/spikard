@@ -25,7 +25,7 @@
   },
   "jest": {
     "transform": {
-      "tests\\.tsx?$": "ts-jest"
+      ".*\\.tsx?$": "ts-jest"
     },
     "roots": [
       "<rootDir>/src"
