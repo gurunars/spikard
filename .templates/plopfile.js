@@ -10,13 +10,13 @@ module.exports = function(plop) {
     actions: [
       {
         type: "add",
-        path: "src/{{name}}/index.tsx",
-        templateFile: ".templates/StatelessComponent/index.hbs"
+        path: "../src/{{name}}/index.tsx",
+        templateFile: "StatelessComponent/index.hbs"
       },
       {
         type: "add",
-        path: "src/{{name}}/story.tsx",
-        templateFile: ".templates/StatelessComponent/story.hbs"
+        path: "../src/{{name}}/story.tsx",
+        templateFile: "StatelessComponent/story.hbs"
       }
     ]
   });
@@ -32,13 +32,13 @@ module.exports = function(plop) {
     actions: [
       {
         type: "add",
-        path: "src/{{name}}/index.tsx",
-        templateFile: ".templates/StatefulComponent/index.hbs"
+        path: "../src/{{name}}/index.tsx",
+        templateFile: "StatefulComponent/index.hbs"
       },
       {
         type: "add",
-        path: "src/{{name}}/story.tsx",
-        templateFile: ".templates/StatefulComponent/story.hbs"
+        path: "../src/{{name}}/story.tsx",
+        templateFile: "StatefulComponent/story.hbs"
       }
     ]
   });
