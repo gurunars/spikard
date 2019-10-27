@@ -16,7 +16,7 @@ describe("{{name}}", () => {
     const onClick = jest.fn();
     const wrapper = shallow(<{{name}} title="Sample Title" onClick={onClick} />);
     wrapper
-      .find("button")
+      .find("div")
       .at(0)
       .simulate("click");
     expect(onClick).toHaveBeenCalled();
