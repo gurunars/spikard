@@ -3,5 +3,5 @@
     "^.+\\.tsx?$": "ts-jest"
   },
   "testRegex": "tests\\.tsx?$",
-  "moduleFileExtensions": ["ts", "tsx"]
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"]
 }
