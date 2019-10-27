@@ -24,6 +24,7 @@
     "build-storybook": "build-storybook"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/.enzyme.js",
     "preset": "ts-jest",
     "testRegex": "tests\\.tsx?$"
   },
