@@ -27,6 +27,9 @@
     "transform": {
       "tests\\.tsx?$": "ts-jest"
     },
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testRegex": "tests\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
