@@ -27,6 +27,10 @@
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts{,x}"
     ],
+    "coveragePathIgnorePatterns": [
+      "tests\\.tsx?$",
+      "story\\.tsx?$"
+    ],
     "collectCoverage": true,
     "coverageReporters": [
       "json",
