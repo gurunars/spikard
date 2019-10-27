@@ -18,10 +18,23 @@
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json \"src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --fix \"src/**/*.ts{,x}\"",
-    "test": "jest --config jestconfig.json",
+    "test": "jest",
     "plop": "plop",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "jest": {
+    "transform": {
+      "tests\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "tests\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
   },
   "main": "index.js",
   "devDependencies": {
