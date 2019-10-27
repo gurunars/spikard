@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 import SampleStuff from ".";
 
 describe("SampleStuff", () => {
-  it("renders correctly", () => {
+  it("should render correctly", () => {
     const tree = renderer
       .create(<SampleStuff title="FooBar" onClick={() => {}} />)
       .toJSON();
