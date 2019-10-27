@@ -33,3 +33,24 @@ jobs:
       - name: Publish
         run: yarn publish
 
+      - name: Storybook
+        run: yarn storybook
+
+      - name: Configure GIT
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "Storybook Publisher"
+
+      - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: gurunars
+          TITLE: spikard
+        run: |
+          mv ./dist /tmp
+          cd /tmp/dist
+
+          git init
+          git add .
+          git commit -am init
+          git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${USERNAME}/${TITLE}.git gh-pages
