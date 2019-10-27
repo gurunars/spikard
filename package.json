@@ -19,7 +19,7 @@
     "lint": "tslint --project tsconfig.json \"src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest",
-    "plop": "plop",
+    "plop": "plop --plopfile .templates/plopfile.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
