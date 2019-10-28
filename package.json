@@ -20,8 +20,8 @@
     "format": "tslint --project tsconfig.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest",
     "plop": "plop --plopfile .templates/plopfile.js",
-    "docs": "docz dev --config .docs/rc.js",
-    "build-docs": "docz build --config .docs/rc.js"
+    "docs": "docz dev --ts",
+    "build-docs": "docz build --ts -d docs && rm -rf .docz"
   },
   "jest": {
     "collectCoverageFrom": [
