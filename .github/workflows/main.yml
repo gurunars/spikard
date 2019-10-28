@@ -34,7 +34,7 @@ jobs:
         run: yarn publish
 
       - name: Storybook
-        run: yarn storybook
+        run: yarn build-storybook
 
       - name: Publish Storybook
         env:
