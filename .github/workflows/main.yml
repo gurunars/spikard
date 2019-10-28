@@ -49,6 +49,7 @@ jobs:
           cd /tmp/storybook-static
 
           git init
+          git checkout -b gh-pages
           git add .
           git commit -am "Storybook build ${GITHUB_SHA}"
           git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
