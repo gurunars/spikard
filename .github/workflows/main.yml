@@ -50,6 +50,7 @@ jobs:
 
           git init
           git checkout -b gh-pages
+          echo spikard.gurunars.com > CNAME
           git add .
           git commit -am "Storybook build ${GITHUB_SHA}"
           git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
