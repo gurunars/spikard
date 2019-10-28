@@ -27,14 +27,19 @@ jobs:
       - name: Test
         run: yarn test
 
+      - name: Storybook
+        run: yarn build-storybook
+
       - name: Prepare GITHUB_TOKEN
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
+      - name: Prepare GIT
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name ${GITHUB_ACTOR}
+
       - name: Publish
         run: yarn publish
-
-      - name: Storybook
-        run: yarn build-storybook
 
       - name: Publish Storybook
         env:
@@ -45,5 +50,5 @@ jobs:
 
           git init
           git add .
-          git commit --author "@{GITHUB_ACTOR} <>" -am "Storybook build ${GITHUB_SHA}"
+          git commit -am "Storybook build ${GITHUB_SHA}"
           git push --force https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
