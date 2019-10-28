@@ -20,8 +20,8 @@
     "format": "tslint --project tsconfig.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest",
     "plop": "plop --plopfile .templates/plopfile.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "docs": "docz dev --config .docs/rc.js",
+    "build-docs": "docz build --config .docs/rc.js"
   },
   "jest": {
     "collectCoverageFrom": [

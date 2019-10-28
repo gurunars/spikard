@@ -3,16 +3,15 @@ name: SampleStuff
 route: /
 ---
 
-import { Playground, Props } from 'docz'
-import { Button } from './'
+import { Playground, Props } from "docz";
+import SampleStuff from "./";
 
 # Button
 
-<Props of={Button} />
+<Props of={SampleStuff} />
 
 ## Basic usage
 
 <Playground>
-  <Button>Click me</Button>
-  <Button kind="secondary">Click me</Button>
+  <SampleStuff title="Sample Title" onClick={() => console.log("Click")} />
 </Playground>
