@@ -58,6 +58,7 @@
     "@types/react-dom": "^16.9.3",
     "@types/react-test-renderer": "^16.9.1",
     "babel-loader": "^8.0.6",
+    "docz": "^2.0.0-rc.64",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",
