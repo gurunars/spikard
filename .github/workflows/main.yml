@@ -40,8 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mv ./storybook-static ${GITHUB_WORKSPACE}
-          cd ${GITHUB_WORKSPACE}/storybook-static
+          mv ./storybook-static /tmp
+          cd /tmp/storybook-static
 
           git init
           git add .
