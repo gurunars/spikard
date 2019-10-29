@@ -2,7 +2,7 @@
 
 exports[`SampleStuff should render correctly 1`] = `
 <button
-  onClick={[Function]}
+  onClick={[MockFunction]}
   style={
     Object {
       "cursor": "pointer",
