@@ -6,7 +6,8 @@ function main() {
     .filter(it => fs.existsSync("src/" + it + "/index.ts") || fs.existsSync("src/" + it + "/index.tsx"))
     .map(it => "export { default as " + it + " } from \"./" + it + "\";")
     .join("\n");
-  //fs.writeFile()
+  fs.mkdirSync("generated")
+  fs.writeFileSync("generated/index.ts", lines);
 }
 
 main();

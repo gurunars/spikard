@@ -30,6 +30,7 @@
     "noEmitOnError": true
   },
   "include": [
+    "generated/**/*",
     "src/**/*",
     ".types/*"
   ],

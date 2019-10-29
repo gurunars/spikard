@@ -4,3 +4,4 @@ storybook-static
 dist
 node_modules
 test-report.html
+generated
