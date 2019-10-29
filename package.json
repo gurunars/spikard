@@ -29,8 +29,7 @@
     ],
     "coveragePathIgnorePatterns": [
       "tests\\.tsx?$",
-      "story\\.tsx?$",
-      "/src/index.ts"
+      "story\\.tsx?$"
     ],
     "collectCoverage": true,
     "coverageReporters": [
