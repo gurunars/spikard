@@ -7,7 +7,7 @@ import SampleStuff from ".";
 describe("SampleStuff", () => {
   it("should render correctly", () => {
     const tree = renderer
-      .create(<SampleStuff title="FooBar" onClick={() => {}} />)
+      .create(<SampleStuff title="FooBar" onClick={() => { }} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
