@@ -21,11 +21,20 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Build
-        run: yarn build
+      - name: Lint
+        run: yarn lint
 
       - name: Test
         run: yarn test
+
+      - name: Upload test coverage
+        uses: actions/upload-artifact@master
+        with:
+          name: coverage
+          path: coverage
+
+      - name: Build
+        run: yarn build
 
       - name: Storybook
         run: yarn build-storybook
