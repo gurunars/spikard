@@ -6,8 +6,9 @@ import SampleStuff from ".";
 
 describe("SampleStuff", () => {
   it("should render correctly", () => {
+    const onClick = jest.fn();
     const tree = renderer
-      .create(<SampleStuff title="FooBar" onClick={() => { }} />)
+      .create(<SampleStuff title="FooBar" onClick={onClick} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
