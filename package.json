@@ -1,6 +1,6 @@
 {
   "name": "@gurunars/spikard",
-  "version": "0.2.13",
+  "version": "0.2.15",
   "description": "Some lib",
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": false,
@@ -13,7 +13,7 @@
     "type": "git"
   },
   "scripts": {
-    "show-package": "npm pack --dry-run",
+    "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "clean": "rm -rf dist storybook-static generated",
     "build": "node .templates/genIndex.js && tsc",
     "update": "yarn upgrade-interactive --latest",
@@ -50,7 +50,7 @@
     "preset": "ts-jest",
     "testRegex": "tests\\.tsx?$"
   },
-  "main": "index.js",
+  "main": "dist/generated/index.js",
   "devDependencies": {
     "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-actions": "^5.2.5",
