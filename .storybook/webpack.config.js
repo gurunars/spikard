@@ -1,5 +1,7 @@
 module.exports = ({ config }) => {
-  config.module.rules.push({
+  const rules = config.module.rules;
+
+  rules.push({
     test: /\.(ts|tsx)$/,
     loader: require.resolve('babel-loader'),
     options: {
