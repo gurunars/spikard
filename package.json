@@ -15,7 +15,7 @@
   "scripts": {
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "clean": "rm -rf dist storybook-static generated",
-    "build": "node .templates/genIndex.js && tsc",
+    "build": "node .templates/genIndex.js && webpack",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json \"src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --fix \"src/**/*.ts{,x}\"",
@@ -72,10 +72,14 @@
     "jest": "^24.9.0",
     "plop": "^2.5.2",
     "react-test-renderer": "^16.11.0",
+    "source-map-loader": "^0.2.4",
     "storybook-host": "^5.1.0",
     "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.1",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "files": [
     "dist/**/*"
