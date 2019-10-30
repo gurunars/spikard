@@ -13,6 +13,7 @@
     "type": "git"
   },
   "scripts": {
+    "show-package": "npm pack --dry-run",
     "clean": "rm -rf dist storybook-static generated",
     "build": "node .templates/genIndex.js && tsc",
     "update": "yarn upgrade-interactive --latest",
