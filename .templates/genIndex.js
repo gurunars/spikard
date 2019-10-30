@@ -7,7 +7,7 @@ function main() {
     .map(it => "export { default as " + it + " } from \"../src/" + it + "\";")
     .join("\n");
   if (!fs.existsSync("generated")) {
-    fs.mkdirSync("generated")
+    fs.mkdirSync("generated");
   }
   fs.writeFileSync("generated/index.ts", lines);
 }
