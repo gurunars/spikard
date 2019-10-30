@@ -7,14 +7,18 @@ const SampleStuff = (props: {
   onClick: () => void
 }): React.ReactElement<any> => (
     <div>
-      <Icon />
 
       <button
         style={{
-          cursor: "pointer"
+          cursor: "pointer",
+          alignItems: "center",
+          display: "flex",
+          padding: "5px",
+          color: "green"
         }}
         onClick={props.onClick}
       >
+        <Icon color="green" />
         {props.title}
       </button>
     </div>
