@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ReactComponent as Icon } from "./icon.svg";
+import Icon from "./icon.svg";
 
 const SampleStuff = (props: {
   title: string,

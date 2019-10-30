@@ -8,6 +8,12 @@ module.exports = ({ config }) => {
       presets: [['react-app', { flow: false, typescript: true }]],
     },
   });
+
+  rules.pack({
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  })
+
   config.resolve.extensions.push('.ts', '.tsx');
   return config;
 };
