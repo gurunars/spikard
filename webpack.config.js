@@ -2,7 +2,7 @@ const fs = require("fs");
 
 class ConfigureEnv {
   apply(compiler) {
-    compiler.hooks.beforeCompile.tap("ConfigureEnv", () => {
+    compiler.hooks.beforeCompile.tap(this.constructor.name, () => {
       process.env["NODE_ENV"] = "production";
     });
   }
@@ -10,7 +10,7 @@ class ConfigureEnv {
 
 class GenerateIndex {
   apply(compiler) {
-    compiler.hooks.beforeCompile.tap("GenerateIndex", () => {
+    compiler.hooks.beforeCompile.tap(this.constructor.name, () => {
       const files = fs.readdirSync("src");
       const lines = files
         .filter(
