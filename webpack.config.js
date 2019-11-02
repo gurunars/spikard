@@ -1,10 +1,33 @@
-process.env["NODE_ENV"] = "production";
+const fs = require("fs");
 
+function configureEnv() {
+  process.env["NODE_ENV"] = "production";
+}
+
+function generateIndex() {
+  const files = fs.readdirSync("src");
+  const lines = files
+    .filter(
+      it =>
+        fs.existsSync("src/" + it + "/index.ts") ||
+        fs.existsSync("src/" + it + "/index.tsx")
+    )
+    .map(it => "export { default as " + it + ' } from "../src/' + it + '";')
+    .join("\n");
+  if (!fs.existsSync("generated")) {
+    fs.mkdirSync("generated");
+  }
+  fs.writeFileSync("generated/index.ts", lines);
+}
+
+// https://webpack.js.org/configuration/
 module.exports = {
   mode: "production",
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
+
+  entry: ["./generated"],
 
   resolve: {
     extensions: [".ts", ".tsx"]
