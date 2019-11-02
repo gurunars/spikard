@@ -1,23 +1,31 @@
 const fs = require("fs");
 
-function configureEnv() {
-  process.env["NODE_ENV"] = "production";
+class ConfigureEnv {
+  apply(compiler) {
+    compiler.hooks.entryOption.tap(() => {
+      process.env["NODE_ENV"] = "production";
+    });
+  }
 }
 
-function generateIndex() {
-  const files = fs.readdirSync("src");
-  const lines = files
-    .filter(
-      it =>
-        fs.existsSync("src/" + it + "/index.ts") ||
-        fs.existsSync("src/" + it + "/index.tsx")
-    )
-    .map(it => "export { default as " + it + ' } from "../src/' + it + '";')
-    .join("\n");
-  if (!fs.existsSync("generated")) {
-    fs.mkdirSync("generated");
+class GenerateIndex {
+  apply(compiler) {
+    compiler.hooks.beforeRun.tap(() => {
+      const files = fs.readdirSync("src");
+      const lines = files
+        .filter(
+          it =>
+            fs.existsSync("src/" + it + "/index.ts") ||
+            fs.existsSync("src/" + it + "/index.tsx")
+        )
+        .map(it => "export { default as " + it + ' } from "../src/' + it + '";')
+        .join("\n");
+      if (!fs.existsSync("generated")) {
+        fs.mkdirSync("generated");
+      }
+      fs.writeFileSync("generated/index.ts", lines);
+    });
   }
-  fs.writeFileSync("generated/index.ts", lines);
 }
 
 // https://webpack.js.org/configuration/
@@ -32,6 +40,8 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx"]
   },
+
+  plugins: [new ConfigureEnv(), new GenerateIndex()],
 
   module: {
     rules: [
