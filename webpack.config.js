@@ -37,14 +37,6 @@ module.exports = {
 
   entry: ["./generated"],
 
-  output: {
-    path: "dist",
-    filename: "[name].js",
-    libraryTarget: "umd",
-    library: "Spikard",
-    umdNamedDefine: true
-  },
-
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },

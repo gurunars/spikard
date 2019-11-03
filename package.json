@@ -1,7 +1,7 @@
 {
   "name": "@gurunars/spikard",
-  "version": "0.2.22",
-  "description": "Some lib",
+  "version": "0.2.23",
+  "description": "Spikard",
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": false,
   "license": "MIT",
