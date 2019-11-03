@@ -1,6 +1,6 @@
 {
   "name": "@gurunars/spikard",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "Some lib",
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": false,
@@ -48,7 +48,7 @@
       "<rootDir>/.testing/enzyme.js"
     ],
     "moduleNameMapper": {
-      "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.svg$": "<rootDir>/.testing/fileMock.js"
     },
     "preset": "ts-jest",
     "testRegex": "tests\\.tsx?$"
