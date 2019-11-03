@@ -33,7 +33,7 @@ module.exports = {
   mode: "production",
 
   // Enable sourcemaps for debugging webpack's output.
-  // devtool: "source-map",
+  devtool: "source-map",
 
   entry: ["./generated"],
 
