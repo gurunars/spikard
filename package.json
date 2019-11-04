@@ -25,6 +25,11 @@
     "build-storybook": "build-storybook"
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": ".config/build/tsconfig.json"
+      }
+    },
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts{,x}"
     ],
