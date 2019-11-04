@@ -52,11 +52,11 @@
     "setupFilesAfterEnv": [
       "<rootDir>/.config/testing/enzyme.js"
     ],
-    "preset": "ts-jest",
-    "testRegex": "tests\\.tsx?$",
     "moduleNameMapper": {
-      "\\.svg": "<rootDir>/.config/testing/svgrMock.js"
-    }
+      "\\.svg$": "<rootDir>/.config/testing/fileMock.js"
+    },
+    "preset": "ts-jest",
+    "testRegex": "tests\\.tsx?$"
   },
   "main": "dist/index.js",
   "devDependencies": {
