@@ -53,7 +53,10 @@
       "<rootDir>/.config/testing/enzyme.js"
     ],
     "preset": "ts-jest",
-    "testRegex": "tests\\.tsx?$"
+    "testRegex": "tests\\.tsx?$",
+    "moduleNameMapper": {
+      "\\.svg": "<rootDir>/.config/testing/svgrMock.js"
+    }
   },
   "main": "dist/index.js",
   "devDependencies": {
