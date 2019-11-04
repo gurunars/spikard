@@ -45,7 +45,7 @@
       }
     },
     "setupFilesAfterEnv": [
-      ".config/testing/enzyme.js"
+      "<rootDir>/.config/testing/enzyme.js"
     ],
     "preset": "ts-jest",
     "testRegex": "tests\\.tsx?$"
