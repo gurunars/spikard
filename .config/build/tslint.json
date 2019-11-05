@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:latest",
+  "extends": ["tslint:latest"],
   "rules": {
     "no-redundant-jsdoc": true,
     "class-name": true,
@@ -53,7 +53,7 @@
       "check-open-brace",
       "check-whitespace"
     ],
-    "quotemark": [true, "single", "jsx-single"],
+    "quotemark": [false, "single", "jsx-single"],
     "radix": true,
     "semicolon": [true, "always"],
     "switch-default": true,
