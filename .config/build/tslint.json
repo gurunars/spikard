@@ -1,29 +1,55 @@
 {
-  "extends": ["tslint:latest"],
+  "extends": [
+    "tslint:latest"
+  ],
   "rules": {
     "no-redundant-jsdoc": true,
     "class-name": true,
-    "arrow-parens": [true, "ban-single-arg-parens"],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
     "no-var-requires": true,
     "no-unnecessary-callback-wrapper": true,
-    "align": [true, "parameters", "arguments", "statements"],
-    "no-implicit-dependencies": [true, "dev"],
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements"
+    ],
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
     "object-literal-sort-keys": false,
     "ban": false,
-    "comment-format": [true, "check-space"],
+    "comment-format": [
+      true,
+      "check-space"
+    ],
     "curly": true,
     "eofline": false,
     "forin": true,
-    "indent": [true, "spaces", 2],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
     "arrow-return-shorthand": true,
-    "interface-name": [true, "never-prefix"],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
     "only-arrow-functions": true,
     "promise-function-async": true,
     "jsdoc-format": true,
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
     "label-position": true,
-    "max-line-length": [true, 120],
+    "max-line-length": [
+      true,
+      120
+    ],
     "no-var-keyword": true,
     "member-ordering": [
       true,
@@ -53,14 +79,30 @@
       "check-open-brace",
       "check-whitespace"
     ],
-    "quotemark": [true, "double", "jsx-double"],
+    "quotemark": [
+      true,
+      "double",
+      "jsx-double"
+    ],
     "radix": true,
-    "semicolon": [true, "always"],
+    "semicolon": [
+      true,
+      "never"
+    ],
     "switch-default": true,
-    "trailing-comma": [false],
+    "trailing-comma": [
+      false
+    ],
     "await-promise": true,
-    "triple-equals": [true, "allow-null-check"],
-    "typedef": [true, "parameter", "property-declaration"],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef": [
+      true,
+      "parameter",
+      "property-declaration"
+    ],
     "typedef-whitespace": [
       true,
       {
@@ -88,6 +130,9 @@
       "check-type",
       "check-typecast"
     ],
-    "ban-types": [true, []]
+    "ban-types": [
+      true,
+      []
+    ]
   }
 }

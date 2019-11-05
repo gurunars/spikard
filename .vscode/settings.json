@@ -11,5 +11,6 @@
   "tslint.autoFixOnSave": true,
   "typescript.preferences.quoteStyle": "double",
   "typescript.format.semicolons": "remove",
-  "tslint.configFile": ".config/build/tslint.json"
+  "tslint.configFile": ".config/build/tslint.json",
+  "tslint.packageManager": "yarn"
 }
