@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 
-const DURATION = 5000;
-const FPS = 240;
-const CHUNKS = Math.ceil((DURATION / 1000) * FPS);
-const DELAY = DURATION / CHUNKS;
-const STEP = 1 / CHUNKS;
+const DURATION = 5000
+const FPS = 240
+const CHUNKS = Math.ceil((DURATION / 1000) * FPS)
+const DELAY = DURATION / CHUNKS
+const STEP = 1 / CHUNKS
 
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 const {{name}} = (props: {
   title: string,
   onClick: () => void
 }): React.ReactElement<any> => {
-  const [value, setValue] = useState(0);
-  const rotation = value * 360;
+  const [value, setValue] = useState(0)
+  const rotation = value * 360
 
   async function startRotation() {
-    let cursor = value;
+    let cursor = value
     while (true) {
-      cursor += STEP;
+      cursor += STEP
       if (cursor > 1) {
-        cursor = 0;
+        cursor = 0
       }
-      setValue(cursor);
-      await sleep(DELAY);
+      setValue(cursor)
+      await sleep(DELAY)
     }
   }
 
-  useEffect(() => { startRotation() }, []);
+  useEffect(() => { startRotation() }, [])
 
   return (
     <div
@@ -42,7 +42,7 @@ const {{name}} = (props: {
     >
       <p>{props.title}</p>
     </div>
-  );
+  )
 }
 
-export default {{name}};
+export default {{name}}
