@@ -1,22 +1,22 @@
-import fs from "fs";
+import fs from "fs"
 
-import typescript from "rollup-plugin-typescript";
-import svgr from "@svgr/rollup";
+import typescript from "rollup-plugin-typescript"
+import svgr from "@svgr/rollup"
 
 function generateIndex() {
-  const files = fs.readdirSync("src");
+  const files = fs.readdirSync("src")
   const lines = files
     .filter(
       it =>
         fs.existsSync("src/" + it + "/index.ts") ||
         fs.existsSync("src/" + it + "/index.tsx")
     )
-    .map(it => "export { default as " + it + ' } from "../src/' + it + '";')
-    .join("\n");
+    .map(it => "export { default as " + it + ' } from "../src/' + it + '"')
+    .join("\n")
   if (!fs.existsSync("generated")) {
-    fs.mkdirSync("generated");
+    fs.mkdirSync("generated")
   }
-  fs.writeFileSync("generated/index.ts", lines);
+  fs.writeFileSync("generated/index.ts", lines)
 }
 
 export default {
@@ -29,7 +29,7 @@ export default {
   plugins: [
     {
       buildStart() {
-        generateIndex();
+        generateIndex()
       }
     },
     typescript({
@@ -37,4 +37,4 @@ export default {
     }),
     svgr()
   ]
-};
+}
