@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Icon from "./icon.svg";
+import Icon from "./icon.svg"
 
 const SampleStuff = (props: {
   title: string;
@@ -21,6 +21,6 @@ const SampleStuff = (props: {
         {props.title}
       </button>
     </div>
-  );
+  )
 
-export default SampleStuff;
+export default SampleStuff
