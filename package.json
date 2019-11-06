@@ -21,8 +21,8 @@
     "format": "tslint --project .config/build/tsconfig.json --config .config/build/tslint.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest",
     "plop": "plop --plopfile .config/templates/plopfile.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "docs": "start-storybook --config-dir .config/docs -p 6006",
+    "build-docs": "build-storybook"
   },
   "jest": {
     "globals": {
