@@ -18,7 +18,7 @@
     "build": "rollup -c .config/build/rollup.config.js",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project .config/build/tsconfig.json --config .config/build/tslint.json \"src/**/*.ts{,x}\"",
-    "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"src/**/*.ts{,x}\"",
+    "format": "tslint --project .config/build/tsconfig.json --config .config/build/tslint.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest",
     "plop": "plop --plopfile .config/templates/plopfile.js",
     "storybook": "start-storybook -p 6006",

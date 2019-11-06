@@ -32,7 +32,9 @@ export default {
         generateIndex();
       }
     },
-    typescript(),
+    typescript({
+      tsconfig: ".config/build/tsconfig.json"
+    }),
     svgr()
   ]
 };
