@@ -4,7 +4,9 @@
   "description": "Some lib",
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": true,
-  "workspaces": "packages/*",
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
