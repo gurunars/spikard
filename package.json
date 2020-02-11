@@ -21,7 +21,42 @@
     "build-docs": "build-storybook",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
-    "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\""
+    "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\"",
+    "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/tsconfig.json"
+      }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/packages/**/src/**/*.ts{,x}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "tests\\.tsx?$",
+      "story\\.tsx?$"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/.config/testing/enzyme.js"
+    ],
+    "moduleNameMapper": {
+      "\\.svg$": "<rootDir>/.config/testing/fileMock.js"
+    },
+    "preset": "ts-jest",
+    "testRegex": "tests\\.tsx?$"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.0",
