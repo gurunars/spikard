@@ -78,6 +78,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-test-renderer": "^16.9.2",
     "babel-loader": "^8.0.6",
+    "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^25.1.0",
     "plop": "^2.5.3",
     "rollup": "^1.31.0",
