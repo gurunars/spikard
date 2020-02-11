@@ -12,8 +12,8 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDirs": [
-      "generated",
-      "src",
+      "**/generated",
+      "**7src",
       ".config/build/types"
     ],
     "forceConsistentCasingInFileNames": true,
@@ -34,8 +34,8 @@
     "noEmitOnError": true
   },
   "include": [
-    "generated/**/*",
-    "src/**/*",
+    "**/generated/**/*",
+    "**/src/**/*",
     ".config/build/types/*"
   ],
   "exclude": [
