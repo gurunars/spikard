@@ -17,6 +17,7 @@
   },
   "scripts": {
     "show-package": "yarn workspaces run show-package",
+    "release": "yarn workspaces run publish --non-interactive",
     "plop": "plop --plopfile .config/templates/plopfile.js",
     "docs": "start-storybook --config-dir .config/docs -p 6006",
     "build": "yarn workspaces run build",

@@ -41,10 +41,10 @@ jobs:
           git config --global user.email "<>"
           git config --global user.name ${GITHUB_ACTOR}
 
-      - name: Publish
-        run: yarn publish
+      - name: Release
+        run: yarn release
 
-      - name: Publish Storybook
+      - name: Release Storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
