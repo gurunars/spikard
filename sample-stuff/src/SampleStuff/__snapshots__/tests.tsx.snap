@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SampleStuff should render correctly 1`] = `
+<div>
+  <button
+    onClick={[MockFunction]}
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "green",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "5px",
+      }
+    }
+  >
+    <test-file-stub
+      color="green"
+    />
+    FooBar
+  </button>
+</div>
+`
