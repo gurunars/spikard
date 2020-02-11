@@ -8,8 +8,6 @@
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "clean": "rm -rf dist storybook-static generated",
     "build": "rollup -c ../../.config/build/rollup.config.js",
-    "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
-    "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\"",
     "test": "jest"
   },
   "jest": {

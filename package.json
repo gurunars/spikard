@@ -19,7 +19,9 @@
     "plop": "plop --plopfile .config/templates/plopfile.js",
     "docs": "start-storybook --config-dir .config/docs -p 6006",
     "build-docs": "build-storybook",
-    "update": "yarn upgrade-interactive --latest"
+    "update": "yarn upgrade-interactive --latest",
+    "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
+    "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\""
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.0",
