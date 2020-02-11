@@ -1,6 +1,6 @@
 {
   "name": "@gurunars/spikard",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Some lib",
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": true,
@@ -64,6 +64,12 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.0",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-centered": "^5.2.5",
+    "@storybook/addon-info": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
     "@svgr/rollup": "^4.3.3",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^24.0.21",
@@ -79,12 +85,6 @@
     "rollup-watch": "^4.3.1",
     "ts-jest": "^24.1.0",
     "tslint": "^6.0.0-beta0",
-    "typescript": "^3.6.4",
-    "@storybook/addon-actions": "^5.2.5",
-    "@storybook/addon-centered": "^5.2.5",
-    "@storybook/addon-info": "^5.2.5",
-    "@storybook/addon-links": "^5.2.5",
-    "@storybook/addons": "^5.2.5",
-    "@storybook/react": "^5.2.5"
+    "typescript": "^3.6.4"
   }
 }
