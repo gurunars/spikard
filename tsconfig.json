@@ -13,7 +13,7 @@
     "moduleResolution": "node",
     "rootDirs": [
       "**/generated",
-      "**7src",
+      "**/src",
       ".config/build/types"
     ],
     "forceConsistentCasingInFileNames": true,
