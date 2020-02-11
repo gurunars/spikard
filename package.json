@@ -14,5 +14,5 @@
   "repository": {
     "url": "ssh://git@github.com:gurunars/spikard.git",
     "type": "git"
-  },
+  }
 }
