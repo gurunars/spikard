@@ -5,7 +5,7 @@
   "author": "Anton Berezin <gurunars@gmail.com>",
   "private": true,
   "workspaces": [
-    "SampleStuff"
+    "sample-stuff"
   ],
   "license": "MIT",
   "publishConfig": {
