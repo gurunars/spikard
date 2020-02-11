@@ -8,13 +8,9 @@
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "clean": "rm -rf dist storybook-static generated",
     "build": "rollup -c ../../.config/build/rollup.config.js",
-    "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
     "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\"",
-    "test": "jest",
-    "plop": "plop --plopfile ../../.config/templates/plopfile.js",
-    "docs": "start-storybook --config-dir ../../.config/docs -p 6006",
-    "build-docs": "build-storybook"
+    "test": "jest"
   },
   "jest": {
     "globals": {

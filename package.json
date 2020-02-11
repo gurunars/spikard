@@ -16,8 +16,10 @@
     "type": "git"
   },
   "scripts": {
+    "plop": "plop --plopfile .config/templates/plopfile.js",
     "docs": "start-storybook --config-dir .config/docs -p 6006",
-    "build-docs": "build-storybook"
+    "build-docs": "build-storybook",
+    "update": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.0",
