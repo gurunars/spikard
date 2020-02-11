@@ -14,5 +14,9 @@
   "repository": {
     "url": "ssh://git@github.com:gurunars/spikard.git",
     "type": "git"
+  },
+  "scripts": {
+    "docs": "start-storybook --config-dir .config/docs -p 6006",
+    "build-docs": "build-storybook"
   }
 }
