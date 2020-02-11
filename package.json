@@ -76,6 +76,12 @@
     "rollup-watch": "^4.3.1",
     "ts-jest": "^24.1.0",
     "tslint": "^6.0.0-beta0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-centered": "^5.2.5",
+    "@storybook/addon-info": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5"
   }
 }
