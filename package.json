@@ -20,7 +20,7 @@
     "plop": "plop --plopfile .config/templates/plopfile.js",
     "docs": "start-storybook --config-dir .config/docs -p 6006",
     "build": "yarn workspaces run build",
-    "build-docs": "build-storybook",
+    "build-docs": "build-storybook --config-dir .config/docs",
     "clean": "yarn workspaces run clean",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
