@@ -18,8 +18,9 @@
   "scripts": {
     "plop": "plop --plopfile .config/templates/plopfile.js",
     "docs": "start-storybook --config-dir .config/docs -p 6006",
+    "build": "yarn workspaces run rollup -c ../../.config/build/rollup.config.js",
     "build-docs": "build-storybook",
-    "clean": "yarn workspaces run clean",
+    "clean": "rm -rf packages/**/dist packages/**/storybook-static packages/**/generated",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\"",
