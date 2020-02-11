@@ -13,6 +13,9 @@
   "files": [
     "dist/**/*"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "immutable": "^4.0.0-rc.12",
     "jsonpack": "^1.1.5",
