@@ -3,7 +3,10 @@
   "version": "0.3.1",
   "description": "Some lib",
   "author": "Anton Berezin <gurunars@gmail.com>",
-  "private": false,
+  "private": true,
+  "workspaces": [
+    "SampleStuff"
+  ],
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
