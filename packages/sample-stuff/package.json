@@ -5,7 +5,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "show-package": "yarn clean && yarn build && npm pack --dry-run",
+    "show-package": "yarn build && npm pack --dry-run",
     "build": "rollup -c ../../.config/build/rollup.config.js"
   },
   "main": "dist/index.js",
