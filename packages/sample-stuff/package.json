@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
-    "clean": "rm -rf dist storybook-static generated",
     "build": "rollup -c ../../.config/build/rollup.config.js"
   },
   "main": "dist/index.js",
