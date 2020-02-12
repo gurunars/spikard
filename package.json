@@ -12,8 +12,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "url": "ssh://git@github.com:gurunars/spikard.git",
-    "type": "git"
+    "url": "ssh://git@github.com/gurunars/spikard.git",
+    "type": "git",
+    "directory": "packages/name"
   },
   "scripts": {
     "show-package": "yarn workspaces run show-package",
