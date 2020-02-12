@@ -8,9 +8,6 @@
     "packages/*"
   ],
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "url": "ssh://git@github.com/gurunars/spikard.git",
     "type": "git",
