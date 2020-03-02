@@ -23,7 +23,7 @@
     "docs": "start-storybook --config-dir .config/docs -p 6006",
     "build": "yarn workspaces run build",
     "build-docs": "build-storybook --config-dir .config/docs",
-    "clean": "yarn workspaces run clean",
+    "clean": "yarn workspaces run clean && rm -rf storybook-static",
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\"",
