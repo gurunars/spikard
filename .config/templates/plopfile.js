@@ -1,65 +1,41 @@
 module.exports = function (plop) {
-  plop.setGenerator("StatelessComponent", {
-    prompts: [
-      {
-        type: "input",
-        name: "name",
-        message: "component name"
-      }
-    ],
-    actions: [
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/index.tsx",
-        templateFile: "StatelessComponent/index.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/story.tsx",
-        templateFile: "StatelessComponent/story.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/tests.tsx",
-        templateFile: "StatelessComponent/tests.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/README.md",
-        templateFile: "common/README.md"
-      }
-    ]
-  });
 
-  plop.setGenerator("StatefulComponent", {
-    prompts: [
-      {
-        type: "input",
-        name: "name",
-        message: "component name"
-      }
-    ],
-    actions: [
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/index.tsx",
-        templateFile: "StatelessComponent/index.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/story.tsx",
-        templateFile: "StatelessComponent/story.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/tests.tsx",
-        templateFile: "StatelessComponent/tests.hbs"
-      },
-      {
-        type: "add",
-        path: "../packages/{{dashCase name}}/README.md",
-        templateFile: "common/README.md"
-      }
-    ]
-  });
-};
+  const titleTpl = "../../packages/{{dashCase name}}"
+
+  function addComponentConfig(name) {
+    plop.setGenerator(name, {
+      prompts: [
+        {
+          type: "input",
+          name: "name",
+          message: "component name"
+        }
+      ],
+      actions: [
+        {
+          type: "add",
+          path: titleTpl + "/src/{{pascalCase name}}/index.tsx",
+          templateFile: name + "/index.hbs"
+        },
+        {
+          type: "add",
+          path: titleTpl + "/src/{{pascalCase name}}/story.tsx",
+          templateFile: name + "/story.hbs"
+        },
+        {
+          type: "add",
+          path: titleTpl + "/src/{{pascalCase name}}/tests.tsx",
+          templateFile: name + "/tests.hbs"
+        },
+        {
+          type: "add",
+          path: titleTpl + "/README.md",
+          templateFile: "common/README.md"
+        }
+      ]
+    })
+  }
+
+  addComponentConfig("StatelessComponent")
+  addComponentConfig("StatefulComponent")
+}
