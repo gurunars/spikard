@@ -7,15 +7,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "url": "ssh://git@github.com/gurunars/spikard.git",
-    "type": "git",
-    "directory": "packages/name"
-  },
+  "license": "Apache-2.0",
   "scripts": {
     "show-package": "yarn workspaces run show-package",
     "release": "yarn workspaces run publish --non-interactive",
@@ -25,43 +17,9 @@
     "build-docs": "build-storybook --config-dir .config/docs",
     "clean": "yarn workspaces run clean && rm -rf storybook-static",
     "update": "yarn upgrade-interactive --latest",
-    "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
-    "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\"",
-    "test": "jest"
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "<rootDir>/tsconfig.json"
-      }
-    },
-    "collectCoverageFrom": [
-      "<rootDir>/packages/**/src/**/*.ts{,x}"
-    ],
-    "coveragePathIgnorePatterns": [
-      "tests\\.tsx?$",
-      "story\\.tsx?$"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
-    "setupFilesAfterEnv": [
-      "<rootDir>/.config/testing/enzyme.js"
-    ],
-    "moduleNameMapper": {
-      "\\.svg$": "<rootDir>/.config/testing/fileMock.js"
-    },
-    "preset": "ts-jest",
-    "testRegex": "tests\\.tsx?$"
+    "lint": "yarn workspaces run lint",
+    "format": "yarn workspaces run format",
+    "test": "yarn workspaces run test"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.8.3",
