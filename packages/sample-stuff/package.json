@@ -29,6 +29,40 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/../../tsconfig.json"
+      }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/../..//packages/**/src/**/*.ts{,x}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "tests\\.tsx?$",
+      "story\\.tsx?$"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/../../.config/testing/enzyme.js"
+    ],
+    "moduleNameMapper": {
+      "\\.svg$": "<rootDir>/../..//.config/testing/fileMock.js"
+    },
+    "preset": "ts-jest",
+    "testRegex": "tests\\.tsx?$"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.14",
     "@storybook/addon-centered": "^5.3.14",
