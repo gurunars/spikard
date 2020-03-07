@@ -1,4 +1,4 @@
-module.exports = function(plop) {
+module.exports = function (plop) {
   plop.setGenerator("StatelessComponent", {
     prompts: [
       {
@@ -10,18 +10,23 @@ module.exports = function(plop) {
     actions: [
       {
         type: "add",
-        path: "../src/{{name}}/index.tsx",
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/index.tsx",
         templateFile: "StatelessComponent/index.hbs"
       },
       {
         type: "add",
-        path: "../src/{{name}}/story.tsx",
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/story.tsx",
         templateFile: "StatelessComponent/story.hbs"
       },
       {
         type: "add",
-        path: "../src/{{name}}/tests.tsx",
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/tests.tsx",
         templateFile: "StatelessComponent/tests.hbs"
+      },
+      {
+        type: "add",
+        path: "../packages/{{dashCase name}}/README.md",
+        templateFile: "common/README.md"
       }
     ]
   });
@@ -37,18 +42,23 @@ module.exports = function(plop) {
     actions: [
       {
         type: "add",
-        path: "../src/{{name}}/index.tsx",
-        templateFile: "StatefulComponent/index.hbs"
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/index.tsx",
+        templateFile: "StatelessComponent/index.hbs"
       },
       {
         type: "add",
-        path: "../src/{{name}}/story.tsx",
-        templateFile: "StatefulComponent/story.hbs"
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/story.tsx",
+        templateFile: "StatelessComponent/story.hbs"
       },
       {
         type: "add",
-        path: "../src/{{name}}/tests.tsx",
-        templateFile: "StatefulComponent/tests.hbs"
+        path: "../packages/{{dashCase name}}/src/{{pascalCase name}}/tests.tsx",
+        templateFile: "StatelessComponent/tests.hbs"
+      },
+      {
+        type: "add",
+        path: "../packages/{{dashCase name}}/README.md",
+        templateFile: "common/README.md"
       }
     ]
   });
