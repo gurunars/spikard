@@ -1,41 +1,56 @@
 module.exports = function (plop) {
 
-  const titleTpl = "../../packages/{{dashCase name}}"
+  const namePrompt = {
+    type: "input",
+    name: "name",
+    message: "component name"
+  }
+
+  const readmeInclude = {
+    type: "add",
+    path: titleTpl + "/README.md",
+    templateFile: "README.md"
+  }
+
+  function add(source, target) {
+    return {
+      type: "add",
+      path: "../../packages/{{dashCase name}}/" + target,
+      templateFile: source
+    }
+  }
+
+  function addSrc(source, target) {
+    return add(source, "/src/{{pascalCase name}}/" + target)
+  }
+
+  const readmeInclude = add("README.md.hbs", "README.md");
 
   function addComponentConfig(name) {
     plop.setGenerator(name, {
-      prompts: [
-        {
-          type: "input",
-          name: "name",
-          message: "component name"
-        }
-      ],
+      prompts: [namePrompt],
       actions: [
-        {
-          type: "add",
-          path: titleTpl + "/src/{{pascalCase name}}/index.tsx",
-          templateFile: name + "/index.hbs"
-        },
-        {
-          type: "add",
-          path: titleTpl + "/src/{{pascalCase name}}/story.tsx",
-          templateFile: name + "/story.hbs"
-        },
-        {
-          type: "add",
-          path: titleTpl + "/src/{{pascalCase name}}/tests.tsx",
-          templateFile: name + "/tests.hbs"
-        },
-        {
-          type: "add",
-          path: titleTpl + "/README.md",
-          templateFile: "common/README.md"
-        }
+        addSrc(name + "/index.hbs", "index.tsx"),
+        addSrc(name + "/story.hbs", "story.tsx"),
+        addSrc(name + "/tests.hbs", "tests.tsx"),
+        readmeInclude
       ]
     })
   }
 
-  addComponentConfig("StatelessComponent")
-  addComponentConfig("StatefulComponent")
+  function addScriptConfig() {
+    plop.setGenerator(name, {
+      prompts: [namePrompt],
+      actions: [
+        addSrc("Script/entrypoint.hbs", "entrypoint.tsx"),
+        add("Script/package.json.hbs", "package.json"),
+        readmeInclude
+      ]
+    })
+  }
+
+  addComponentConfig("Component/Stateless")
+  addComponentConfig("Component/Stateful")
+  addScriptConfig()
+
 }
