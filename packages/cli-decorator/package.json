@@ -1,0 +1,12 @@
+{
+  "name": "cli-decorator",
+  "version": "0.0.1",
+  "description": "CLI decorator",
+  "main": "bin/index.js",
+  "scripts": {},
+  "keywords": [],
+  "license": "Apache-2.0",
+  "bin": {
+    "hello": "./bin/index.js"
+  }
+}
