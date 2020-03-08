@@ -6,12 +6,6 @@ module.exports = function (plop) {
     message: "component name"
   }
 
-  const readmeInclude = {
-    type: "add",
-    path: titleTpl + "/README.md",
-    templateFile: "README.md"
-  }
-
   function add(source, target) {
     return {
       type: "add",
