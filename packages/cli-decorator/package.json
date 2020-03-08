@@ -1,12 +1,33 @@
 {
-  "name": "cli-decorator",
+  "name": "@gurunars/cli-decorator",
   "version": "0.0.1",
   "description": "CLI decorator",
-  "main": "bin/index.js",
-  "scripts": {},
-  "keywords": [],
+  "private": false,
   "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "show-package": "yarn clean && yarn build && npm pack --dry-run",
+    "build": "tsc -p .",
+    "test": "jest",
+    "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
+    "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
+  },
+  "main": "dist/entrypoint.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "url": "ssh://git@github.com/gurunars/spikard.git",
+    "type": "git",
+    "directory": "packages/name"
+  },
   "bin": {
-    "hello": "./bin/index.js"
+    "cli-decorator": "./dist/entrypoint.js"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0"
   }
 }

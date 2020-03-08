@@ -36,7 +36,7 @@ module.exports = function (plop) {
     plop.setGenerator("Script", {
       prompts: [namePrompt],
       actions: [
-        addSrc("Script/entrypoint.hbs", "entrypoint.tsx"),
+        addSrc("Script/entrypoint.hbs", "entrypoint.ts"),
         add("Script/package.json.hbs", "package.json"),
         readmeInclude
       ]
