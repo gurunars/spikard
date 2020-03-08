@@ -33,7 +33,7 @@ module.exports = function (plop) {
   }
 
   function addScriptConfig() {
-    plop.setGenerator(name, {
+    plop.setGenerator("Script", {
       prompts: [namePrompt],
       actions: [
         addSrc("Script/entrypoint.hbs", "entrypoint.tsx"),
