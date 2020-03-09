@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
-    "build": "tsc -p .",
+    "build": "tsc -p ../../tsconfig.json",
     "test": "jest",
     "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
     "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""

@@ -1,3 +1,6 @@
 #!/usr/bin/env node
 
-console.log("hey there!")
+// tslint:disable-next-line: only-arrow-functions
+export default function main() {
+  console.log("hey there!")
+}
