@@ -7,10 +7,10 @@
   "scripts": {
     "clean": "rm -rf dist",
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
-    "build": "tsc -p ../../tsconfig.json",
+    "build": "tsc",
     "test": "jest",
-    "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
-    "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
+    "lint": "tslint --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
+    "format": "tslint --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
   },
   "main": "dist/entrypoint.js",
   "files": [

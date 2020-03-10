@@ -9,8 +9,8 @@
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "build": "rollup -c ../../.config/build/rollup.config.js",
     "test": "jest",
-    "lint": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
-    "format": "tslint --project ../../tsconfig.json --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
+    "lint": "tslint --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
+    "format": "tslint --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
   },
   "main": "dist/index.js",
   "files": [
