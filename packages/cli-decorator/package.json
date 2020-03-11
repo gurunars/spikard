@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "@types/node": "^13.9.0"
+  },
+  "dependencies": {
+    "node": "^13.10.1"
   }
 }
