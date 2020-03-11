@@ -1,1 +1,6 @@
-../../.config/build/tsconfig.json
+{
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "isolatedModules": false
+  }
+}

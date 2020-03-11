@@ -4,3 +4,5 @@
 export default function main() {
   console.log("hey there!")
 }
+
+main()
