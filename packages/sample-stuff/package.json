@@ -67,6 +67,7 @@
     "testRegex": "tests\\.tsx?$"
   },
   "devDependencies": {
+    "@gurunars/cli-decorator": "0.0.1",
     "@storybook/addon-actions": "^5.3.14",
     "@storybook/addon-centered": "^5.3.14",
     "@storybook/addon-info": "^5.3.14",
