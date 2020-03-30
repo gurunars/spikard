@@ -19,6 +19,9 @@ module.exports = function (plop) {
   }
 
   const readmeInclude = add("README.md.hbs", "README.md");
+  const tsConfig = add("Common/tsconfig.json.hbs", "tsconfig.json")
+
+  // TODO: create a symlink file
 
   function addComponentConfig(name) {
     plop.setGenerator(name, {
@@ -27,6 +30,8 @@ module.exports = function (plop) {
         addSrc(name + "/index.hbs", "index.tsx"),
         addSrc(name + "/story.hbs", "story.tsx"),
         addSrc(name + "/tests.hbs", "tests.tsx"),
+        add("Common/package.json.hbs", "package.json"),
+        tsConfig,
         readmeInclude
       ]
     })
@@ -38,6 +43,7 @@ module.exports = function (plop) {
       actions: [
         addSrc("Script/entrypoint.hbs", "entrypoint.ts"),
         add("Script/package.json.hbs", "package.json"),
+        tsConfig,
         readmeInclude
       ]
     })
