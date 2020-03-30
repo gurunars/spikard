@@ -21,7 +21,7 @@ module.exports = function (plop) {
   const readmeInclude = add("README.md.hbs", "README.md");
   const tsConfig = add("Common/tsconfig.json.hbs", "tsconfig.json")
 
-  // TODO: create a symlink file
+  // TODO: create a symlink file to tsconfig-base.json
 
   function addComponentConfig(name) {
     plop.setGenerator(name, {
