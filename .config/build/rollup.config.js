@@ -33,7 +33,7 @@ export default {
       }
     },
     typescript({
-      tsconfig: "../../tsconfig.json"
+      tsconfig: "tsconfig.json"
     }),
     svgr()
   ]
