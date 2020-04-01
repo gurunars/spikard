@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
-import Icon from "./icon.svg";
+import Icon from "./icon.svg"
 
 const SampleStuff = (props: {
-  title: string;
-  onClick: () => void;
+  title: string
+  onClick: () => void
 }): React.ReactElement<any> => (
     <div>
       <button
@@ -21,6 +21,6 @@ const SampleStuff = (props: {
         {props.title}
       </button>
     </div>
-  );
+  )
 
-export default SampleStuff;
+export default SampleStuff

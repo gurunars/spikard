@@ -1,9 +1,9 @@
-import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react";
-import React from "react";
-import { host } from "storybook-host";
+import { action } from "@storybook/addon-actions"
+import { storiesOf } from "@storybook/react"
+import React from "react"
+import { host } from "storybook-host"
 
-import SampleStuff from ".";
+import SampleStuff from "."
 
 storiesOf("SampleStuff", module)
   .addDecorator(host({
@@ -16,4 +16,4 @@ storiesOf("SampleStuff", module)
       title="Sample Title"
       onClick={action("onClick")}
     />
-  ));
+  ))
