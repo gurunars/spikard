@@ -28,7 +28,8 @@
     "with-merged-definitions": "./dist/entrypoint.js"
   },
   "devDependencies": {
-    "@types/node": "^13.9.0"
+    "@types/node": "^13.9.0",
+    "deepmerge": "^4.2.2"
   },
   "dependencies": {
     "node": "^13.10.1"
