@@ -1,0 +1,36 @@
+{
+  "name": "@gurunars/with-merged-definitions",
+  "version": "0.0.1",
+  "description": "With merged definitions",
+  "private": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "show-package": "yarn clean && yarn build && npm pack --dry-run",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "tslint --config ../../.config/build/tslint.json \"src/**/*.ts{,x}\"",
+    "format": "tslint --config ../../.config/build/tslint.json --fix \"src/**/*.ts{,x}\""
+  },
+  "main": "dist/entrypoint.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "url": "ssh://git@github.com/gurunars/spikard.git",
+    "type": "git",
+    "directory": "packages/name"
+  },
+  "bin": {
+    "with-merged-definitions": "./dist/entrypoint.js"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0"
+  },
+  "dependencies": {
+    "node": "^13.10.1"
+  }
+}
