@@ -5,6 +5,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
+    "repl": "jay-repl",
     "clean": "rm -rf dist storybook-static generated",
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "build": "rollup -c ../../.config/build/rollup.config.js"
@@ -29,6 +30,7 @@
     "@storybook/addons": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "enzyme": "^3.11.0",
+    "jay-repl": "^0.2.2",
     "react-test-renderer": "^16.13.1",
     "storybook-host": "^5.1.0"
   }

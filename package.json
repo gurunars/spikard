@@ -78,6 +78,7 @@
     "@types/react-dom": "^16.9.6",
     "@types/react-test-renderer": "^16.9.2",
     "babel-loader": "^8.1.0",
+    "jay-repl": "^0.2.2",
     "jest": "^25.2.4",
     "plop": "^2.6.0",
     "rollup": "^2.3.2",

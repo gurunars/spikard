@@ -5,6 +5,7 @@
   "private": false,
   "license": "Apache-2.0",
   "scripts": {
+    "repl": "jay-repl",
     "clean": "rm -rf dist",
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "build": "tsc",
@@ -29,7 +30,8 @@
   },
   "devDependencies": {
     "@types/node": "^13.9.0",
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "jay-repl": "^0.2.2"
   },
   "dependencies": {
     "node": "^13.10.1"
