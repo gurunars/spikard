@@ -5,7 +5,7 @@
   "private": false,
   "license": "Apache-2.0",
   "scripts": {
-    "repl": "jay-repl",
+    "repl": "jay",
     "clean": "rm -rf dist",
     "show-package": "yarn clean && yarn build && npm pack --dry-run",
     "build": "tsc",

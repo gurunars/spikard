@@ -16,6 +16,7 @@
     "type": "git"
   },
   "scripts": {
+    "repl": "jay",
     "show-package": "yarn workspaces run show-package",
     "release": "yarn workspaces run publish --non-interactive",
     "plop": "plop --plopfile .config/templates/plopfile.js",
