@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-var path = require('path')
-
-var mm = require.main
-
-var appDir = path.dirname(mm ? mm.filename : "")
+import path from "path"
 
 // tslint:disable-next-line: only-arrow-functions
 export default function main() {
+  const mm = require.main
+  const appDir = path.dirname(mm ? mm.filename : "")
   console.log("here " + appDir)
 }
 
