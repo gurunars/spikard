@@ -38,6 +38,15 @@ async function getSpec(): Promise<object> {
   return read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
 }
 
+type Config = {
+  sources: string[],
+  target: string
+}
+
+async function getConfig(): Promise<Config | null> {
+  return (await getSpec())["mergeSpec"] as (Config | null)
+}
+
 /*
 const write = (target: string, value: object) =>
   fs.writeFileSync(target, JSON.stringify(value))
@@ -65,9 +74,9 @@ async function main() {
     .option('-s, --sources <value>', 'files to be merged', collect, [])
     .option('-t, --target <value>', 'where to store results of the merge')
 
-  const spec = await getSpec()
+  const config = await getConfig()
 
-  console.log(spec)
+  console.log(config)
 
   program.parse(process.argv)
 
