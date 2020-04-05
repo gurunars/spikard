@@ -35,8 +35,13 @@ type Config = {
   target: string
 }
 
-const getConfig = async (): Promise<Config | null> =>
-  (await getSpec())["mergeSpec"] as (Config | null)
+const getConfig = async (): Promise<Config | null> => {
+  const config = await getSpec()["mergeSpec"]
+  if (!config || !config.sources || !config.target) {
+    return null
+  }
+  return config as Config
+}
 
 /*
 const write = (target: string, value: object) =>
