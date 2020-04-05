@@ -30,8 +30,9 @@ async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
 }
 
 
-const read = (source: string): object =>
-  JSON.parse((fs.readFileSync(source)).toString())
+async function read(source: string): Promise<object> {
+  return JSON.parse((await fs.promises.readFile(source)).toString())
+}
 
 async function getSpec(): Promise<object> {
   return read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
