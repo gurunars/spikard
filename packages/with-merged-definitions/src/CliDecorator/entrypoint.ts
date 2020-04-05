@@ -27,8 +27,11 @@ const sh = async (cmd: string): Promise<{ stdout: string, stderr: string }> =>
 const read = async (source: string): Promise<object> =>
   JSON.parse((await fs.promises.readFile(source)).toString())
 
+const getPrefix = async (): Promise<string> =>
+  dropNewLine((await sh("npm prefix")).stdout)
+
 const getSpec = async (): Promise<object> =>
-  read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
+  read((await getPrefix()) + "/package.json")
 
 type Config = {
   sources: string[],
