@@ -2,6 +2,10 @@
 
 //import path from "path"
 
+//import baseMerge from "deepmerge"
+import fs from "fs"
+//import os from "os"
+
 import { program } from "commander"
 import { exec } from "child_process"
 
@@ -9,9 +13,8 @@ import { exec } from "child_process"
 function collect(value: string, previous: string[]) {
   return previous.concat([value])
 }
-
-String.prototype.dropNewLine = function () {
-  return this.replace(/(\r\n|\n|\r)/gm, "")
+function dropNewLine(value: string) {
+  return value.replace(/(\r\n|\n|\r)/gm, "")
 }
 
 async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
@@ -27,15 +30,44 @@ async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
 }
 
 
+const read = (source: string): object =>
+  JSON.parse((fs.readFileSync(source)).toString())
+
+async function getSpec(): Promise<object> {
+  return read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
+}
+
+/*
+const write = (target: string, value: object) =>
+  fs.writeFileSync(target, JSON.stringify(value))
+
+const resolveHome = (filePath: string) => {
+if (filePath.length === 0) {
+  return ""
+}
+// '~/folder/path' or '~'
+if (filePath[0] === "~" && (filePath[1] === "/" || filePath.length === 1)) {
+  return filePath.replace("~", os.homedir())
+}
+return filePath
+}
+
+const mergeFiles = (sourcePaths: string[], targetPath: string) =>
+write(
+  resolveHome(targetPath),
+  baseMerge.all(sourcePaths.map(read))
+)
+*/
+
 // tslint:disable-next-line: only-arrow-functions
 async function main() {
   program
     .option('-s, --sources <value>', 'files to be merged', collect, [])
     .option('-t, --target <value>', 'where to store results of the merge')
 
-  const value = (await sh("npm prefix")).stdout.dropNewLine()
+  const spec = await getSpec()
 
-  console.log(value)
+  console.log(spec)
 
   program.parse(process.argv)
 
