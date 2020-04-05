@@ -43,7 +43,12 @@ const getConfig = async (): Promise<Config | null> => {
   if (!config || !config.sources || !config.target) {
     return null
   }
-  return config as Config
+
+  const base = getPrefix()
+  return {
+    sources: config.sources.map((src: string) => base + src),
+    target: base + ""
+  }
 }
 
 /*
