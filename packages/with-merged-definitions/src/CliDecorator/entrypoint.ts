@@ -10,9 +10,6 @@ import { program } from "commander"
 import { exec } from "child_process"
 
 
-function collect(value: string, previous: string[]) {
-  return previous.concat([value])
-}
 function dropNewLine(value: string) {
   return value.replace(/(\r\n|\n|\r)/gm, "")
 }
@@ -70,11 +67,10 @@ write(
 */
 
 async function main() {
-  program
-    .option('-s, --sources <value>', 'files to be merged', collect, [])
-    .option('-t, --target <value>', 'where to store results of the merge')
-
   const config = await getConfig()
+  if (!config) {
+    return
+  }
 
   console.log(config)
 
@@ -82,8 +78,8 @@ async function main() {
 
   //const mm = require.main
   //const appDir = path.dirname(mm ? mm.filename : "")
-  console.log("sources: " + program.sources)
-  console.log("target: " + program.target)
+  console.log("sources: " + config.sources)
+  console.log("target: " + config.target)
 }
 
 main()
