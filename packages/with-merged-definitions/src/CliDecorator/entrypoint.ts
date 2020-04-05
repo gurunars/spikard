@@ -10,6 +10,9 @@ function collect(value: string, previous: string[]) {
   return previous.concat([value])
 }
 
+String.prototype.dropNewLine = function () {
+  return this.replace(/(\r\n|\n|\r)/gm, "")
+}
 
 async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
   return new Promise(function (resolve, reject) {
@@ -30,7 +33,7 @@ async function main() {
     .option('-s, --sources <value>', 'files to be merged', collect, [])
     .option('-t, --target <value>', 'where to store results of the merge')
 
-  const value = (await sh("npm prefix")).stdout
+  const value = (await sh("npm prefix")).stdout.dropNewLine()
 
   console.log(value)
 
