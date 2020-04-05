@@ -60,7 +60,6 @@ write(
 )
 */
 
-// tslint:disable-next-line: only-arrow-functions
 async function main() {
   program
     .option('-s, --sources <value>', 'files to be merged', collect, [])
