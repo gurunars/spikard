@@ -10,12 +10,10 @@ import { program } from "commander"
 import { exec } from "child_process"
 
 
-function dropNewLine(value: string) {
-  return value.replace(/(\r\n|\n|\r)/gm, "")
-}
+const dropNewLine = (value: string) => value.replace(/(\r\n|\n|\r)/gm, "")
 
-async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
-  return new Promise(function (resolve, reject) {
+const sh = async (cmd: string): Promise<{ stdout: string, stderr: string }> =>
+  new Promise(function (resolve, reject) {
     exec(cmd, (err, stdout, stderr) => {
       if (err) {
         reject(err)
@@ -24,25 +22,21 @@ async function sh(cmd: string): Promise<{ stdout: string, stderr: string }> {
       }
     })
   })
-}
 
 
-async function read(source: string): Promise<object> {
-  return JSON.parse((await fs.promises.readFile(source)).toString())
-}
+const read = async (source: string): Promise<object> =>
+  JSON.parse((await fs.promises.readFile(source)).toString())
 
-async function getSpec(): Promise<object> {
-  return read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
-}
+const getSpec = async (): Promise<object> =>
+  read(dropNewLine((await sh("npm prefix")).stdout) + "/package.json")
 
 type Config = {
   sources: string[],
   target: string
 }
 
-async function getConfig(): Promise<Config | null> {
-  return (await getSpec())["mergeSpec"] as (Config | null)
-}
+const getConfig = async (): Promise<Config | null> =>
+  (await getSpec())["mergeSpec"] as (Config | null)
 
 /*
 const write = (target: string, value: object) =>
