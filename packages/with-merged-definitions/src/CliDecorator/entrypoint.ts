@@ -39,15 +39,16 @@ type Config = {
 }
 
 const getConfig = async (): Promise<Config | null> => {
-  const config = await getSpec()["mergeSpec"]
+  const config = (await getSpec())["mergeSpec"]
+
   if (!config || !config.sources || !config.target) {
     return null
   }
 
-  const base = getPrefix()
+  const base = await getPrefix()
   return {
     sources: config.sources.map((src: string) => base + src),
-    target: base + ""
+    target: base + config.target
   }
 }
 

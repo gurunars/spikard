@@ -30,6 +30,12 @@
     "test": "jest",
     "tt": "with-merged-definitions"
   },
+  "mergeSpec": {
+    "sources": [
+      "src bar"
+    ],
+    "target": "trg foo"
+  },
   "jest": {
     "globals": {
       "ts-jest": {
