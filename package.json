@@ -27,14 +27,7 @@
     "update": "yarn upgrade-interactive --latest",
     "lint": "tslint --project tsconfig.json --config .config/build/tslint.json \"packages/**/src/**/*.ts{,x}\"",
     "format": "tslint --project tsconfig.json --config .config/build/tslint.json --fix \"packages/**/src/**/*.ts{,x}\"",
-    "test": "jest",
-    "tt": "with-merged-definitions"
-  },
-  "mergeSpec": {
-    "sources": [
-      "src/bar"
-    ],
-    "target": "trg/foo"
+    "test": "jest"
   },
   "jest": {
     "globals": {
