@@ -47,8 +47,8 @@ const getConfig = async (): Promise<Config | null> => {
 
   const base = await getPrefix()
   return {
-    sources: config.sources.map((src: string) => base + src),
-    target: base + config.target
+    sources: config.sources.map((src: string) => base + "/" + src),
+    target: base + "/" + config.target
   }
 }
 

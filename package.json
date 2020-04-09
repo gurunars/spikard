@@ -32,9 +32,9 @@
   },
   "mergeSpec": {
     "sources": [
-      "src bar"
+      "src/bar"
     ],
-    "target": "trg foo"
+    "target": "trg/foo"
   },
   "jest": {
     "globals": {
