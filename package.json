@@ -9,7 +9,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "url": "ssh://git@github.com:gurunars/spikard.git",
+    "url": "git+https://github.com/gurunars/spikard.git",
     "type": "git"
   },
   "scripts": {
